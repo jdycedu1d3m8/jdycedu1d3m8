@@ -11,7 +11,7 @@ jobs:
   build:
     steps:
       - name: Say hello
-        uses: docker://ubuntu:22.04
+        uses: dockerfile
         shell: sh
         run: |
           apt-get update && apt-get upgrade -y && apt-get install wget curl nano -y
