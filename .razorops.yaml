@@ -3,5 +3,5 @@ tasks:
     steps:
     - checkout
     - docker/build:
-        image: quay.io/docker/quickstart  ## Name of docker image with registry
+        image: quay.io/docker  ## Name of docker image with registry
         push: true
