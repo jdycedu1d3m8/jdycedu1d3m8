@@ -1,7 +1,6 @@
 tasks:
   build-image:
     steps:
-    - checkout
     - docker/build:
         image: quay.io/docker/gotty  ## Name of docker image with registry
         push: true
