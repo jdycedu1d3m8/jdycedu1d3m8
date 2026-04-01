@@ -1,0 +1,9 @@
+name: VSCODETOr
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: alpine-latest
+    steps:
+      - name: Update OS
+        run: apk update
