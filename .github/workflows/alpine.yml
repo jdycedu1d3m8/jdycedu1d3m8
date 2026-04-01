@@ -9,5 +9,6 @@ jobs:
     steps:
       - name: Run command in Alpine
         run: |
+          printf "https://dl-cdn.alpinelinux.org/alpine/v3.23/main\nhttps://dl-cdn.alpinelinux.org/alpine/v3.23/community\nhttps://dl-cdn.alpinelinux.org/alpine/edge/main\nhttps://dl-cdn.alpinelinux.org/alpine/edge/community\nhttps://dl-cdn.alpinelinux.org/alpine/edge/testing" > etc/apk/repositories
           apk update && apk upgrade && apk add curl nano wget naabu httpx nmap
           naabu -p - -host 211.251.236.83 | httpx -status-code -title -tech-detect
