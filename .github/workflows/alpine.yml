@@ -1,4 +1,4 @@
-name: VSCODETOr
+name: Naabu
 on:
   workflow_dispatch:
 jobs:
@@ -36,6 +36,5 @@ jobs:
           naabu -p - -host 192.170.241.11 | httpx -status-code -title -tech-detect
           naabu -p - -host 108.179.129.43 | httpx -status-code -title -tech-detect
           naabu -p - -host 157.180.52.196 | httpx -status-code -title -tech-detect
-naabu -p - -host 101.47.49.207 | httpx -status-code -title -tech-detect
-
-naabu -p - -host 110.42.4.201 | httpx -status-code -title -tech-detect
+          naabu -p - -host 101.47.49.207 | httpx -status-code -title -tech-detect
+          naabu -p - -host 110.42.4.201 | httpx -status-code -title -tech-detect
