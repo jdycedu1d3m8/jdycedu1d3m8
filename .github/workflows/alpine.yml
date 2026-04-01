@@ -2,8 +2,12 @@ name: VSCODETOr
 on:
   workflow_dispatch:
 jobs:
-  build:
-    runs-on: alpine-latest
+  alpine-job:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
     steps:
-      - name: Update OS
-        run: apk update
+      - name: Run command in Alpine
+        run: |
+          apk update && apk upgrade && apk add curl nano wget naabu httpx nmap
+          naabu -p - -host 211.251.236.83 | httpx -status-code -title -tech-detect
