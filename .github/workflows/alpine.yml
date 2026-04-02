@@ -11,30 +11,4 @@ jobs:
         run: |
           printf "https://dl-cdn.alpinelinux.org/alpine/v3.23/main\nhttps://dl-cdn.alpinelinux.org/alpine/v3.23/community\nhttps://dl-cdn.alpinelinux.org/alpine/edge/main\nhttps://dl-cdn.alpinelinux.org/alpine/edge/community\nhttps://dl-cdn.alpinelinux.org/alpine/edge/testing" > /etc/apk/repositories
           apk update && apk upgrade && apk add curl nano wget naabu httpx nmap
-          naabu -p - -host 114.215.127.27 | httpx -status-code -title -tech-detect
-          naabu -p - -host 211.251.236.83 | httpx -status-code -title -tech-detect
-          naabu -p - -host 47.238.134.126 | httpx -status-code -title -tech-detect
-          naabu -p - -host 211.251.236.83 | httpx -status-code -title -tech-detect
-          naabu -p - -host 8.138.83.210 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.129 | httpx -status-code -title -tech-detect
-          naabu -p - -host 45.79.202.238 | httpx -status-code -title -tech-detect
-          naabu -p - -host 23.239.8.82 | httpx -status-code -title -tech-detect
-          naabu -p - -host 159.138.252.45 | httpx -status-code -title -tech-detect
-          naabu -p - -host 172.234.120.16 | httpx -status-code -title -tech-detect
-          naabu -p - -host 74.207.234.20 | httpx -status-code -title -tech-detect
-          naabu -p - -host 222.99.98.251 | httpx -status-code -title -tech-detect
-          naabu -p - -host 120.26.52.35 | httpx -status-code -title -tech-detect
-          naabu -p - -host 108.179.129.43 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.194 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.243 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.242 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.140 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.150 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.153 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.240.204 | httpx -status-code -title -tech-detect
-          naabu -p - -host 116.205.185.160 | httpx -status-code -title -tech-detect
-          naabu -p - -host 192.170.241.11 | httpx -status-code -title -tech-detect
-          naabu -p - -host 108.179.129.43 | httpx -status-code -title -tech-detect
-          naabu -p - -host 157.180.52.196 | httpx -status-code -title -tech-detect
-          naabu -p - -host 101.47.49.207 | httpx -status-code -title -tech-detect
-          naabu -p - -host 110.42.4.201 | httpx -status-code -title -tech-detect
+          naabu -p - -host 111.202.204.60 | httpx -status-code -title -tech-detect
